@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# print 9 "Best School" hi and "Best School"
+n=1
+while [ $n -le 10 ]
+do
+	echo "Best School"
+	if [ $n -eq 9 ]; then
+	   echo "Hi"
+	fi
+	n=$((n+1))
+done
