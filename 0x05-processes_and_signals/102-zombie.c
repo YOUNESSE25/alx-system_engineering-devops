@@ -6,10 +6,10 @@
 
 
 /**
- * while_inf - infinite while
+ * whileinf - infinite while
  * Return: 0
  */
-int while_inf(void)
+int whileinf(void)
 {
 	while (1)
 		sleep(1);
@@ -37,6 +37,7 @@ int main(void)
 		else
 			exit(0);
 	}
-	while_inf();
+
+	whileinf();
 	return (EXIT_SUCCESS);
 }
