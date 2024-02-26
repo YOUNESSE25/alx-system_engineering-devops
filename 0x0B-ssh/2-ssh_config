@@ -1,0 +1,4 @@
+# ssh cfig files
+Host *
+      PasswordAuthentication no
+      IdentifyFile ~/.ssh/school
