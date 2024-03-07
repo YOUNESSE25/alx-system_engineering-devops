@@ -1,4 +1,5 @@
-#!/usr/bin/env bash                                                                                                                                                                                                                                                           
+#!/usr/bin/env bash
+# script with the minimum number of commands to automate your fix.
 cd /etc/nginx/sites-enabled/ || exit;
 rm default;
 ln -s /etc/nginx/sites-available/default default;
