@@ -7,14 +7,13 @@ from sys import argv
 
 def number_of_subscribers(subreddit):
     """ number of subscribers"""
-    if subreddit is None:
-        return 0
-    if type(subreddit) is not str:
-        return 0
+    user = {'User-Agent': 'Lizzie'}
     url = requests.get('https://www.reddit.com/r/{}/about.json'
-                       .format(subreddit), headers={'User-Agent': 'Lizzie'}).json()
-    sub = url.get("data", {}).get("subscribers", 0)
-    return sub
+                       .format(subreddit), headers=user).json()
+    try:
+        return url.get('data').get('subscribers')
+    except Exception:
+        return 0
 
 
 if __name__ == "__main__":
