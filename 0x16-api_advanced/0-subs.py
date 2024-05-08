@@ -13,9 +13,9 @@ def number_of_subscribers(subreddit):
         return 0
     if type(subreddit) is not str:
         return 0
-    hd = {'User-Agent': 'younesse'}
+    user = {'User-Agent': 'younesse'}
     url = requests.get('https://www.reddit.com/r/{}/about.json'
-                       .format(subreddit), headers=hd,
+                       .format(subreddit), headers=user,
                        allow_redirects=False).json()
     sub = url.get("data", {}).get("subscribers", 0)
     return sub
