@@ -10,7 +10,7 @@ def recurse(subreddit, hot_list=[]):
     the titles of all hot articles for a given subreddit'''
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     params = {'limit': 100}
-    headers = {'User-Agent': 'Custom'}
+    headers = {'User-Agent': 'jomojay-app1'}
     if isinstance(after, str):
         if after != "DONE":
             params['after'] = after
