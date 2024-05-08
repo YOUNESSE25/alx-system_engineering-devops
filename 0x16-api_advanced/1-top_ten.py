@@ -9,7 +9,7 @@ def top_ten(subreddit):
     '''function that queries the Reddit API and prints the titles
     of the first 10 '''
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    headers = {"User-Agent": "alx25"}
+    headers = {"User-Agent": "Custom"}
     response = requests.get(url, headers=headers,
                             params={"limit": 10}, allow_redirects=False)
     if response.status_code == 404:
