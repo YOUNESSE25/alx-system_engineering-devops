@@ -8,6 +8,7 @@ def recurse(subreddit, hot_list=[]):
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     headers = {'User-Agent': 'jomojay-app2'}
     params = {'limit': 100}
+    after=None
     if isinstance(after, str):
         if after != "DONE":
             params['after'] = after
