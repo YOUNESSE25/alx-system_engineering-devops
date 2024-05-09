@@ -9,7 +9,7 @@ def count_words(subreddit, word_list, hot_list=[]):
     header = {'User-agent': 'tabbykatz-app3'}
     params = {'limit': 100}
     url = 'http://reddit.com/r/{}/hot.json'
-    after=None
+    after = None
     if isinstance(after, str):
         if after != "DONE":
             params['after'] = after
